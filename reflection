@@ -1,0 +1,9 @@
+Reflection - Module14 BREAD Calculations
+
+In this assignment, I implemented complete BREAD functionality for calculations using FastAPI. I created endpoints for browse, read, add, edit, and delete operations. I also worked with SQLite database models and user authentication features.
+
+One challenge I faced was handling authorization inside Swagger UI. I learned how API authentication works and how endpoints are protected for users. Another challenge was debugging indentation and schema issues, which helped me improve problem-solving skills.
+
+I also learned how to use Docker to containerize the application and push the image to Docker Hub. Updating the README and organizing project files helped me understand professional project structure.
+
+Overall, this assignment improved my backend development, debugging, API testing, and deployment skills.

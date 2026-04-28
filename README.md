@@ -1,42 +1,27 @@
-# Module 13 JWT Authentication Assignment
-
-## Overview
-
-This project is a FastAPI application with JWT-based authentication. It includes user registration, login, frontend pages, automated testing, CI/CD pipeline, and Docker deployment.
+# Module14 BREAD Calculations
 
 ## Features
-
-* User Registration
-* User Login
-* JWT Token Generation
-* Password Hashing
-* FastAPI Frontend Pages
-* Playwright End-to-End Tests
-* GitHub Actions CI/CD
-* Docker Support
+- Register User
+- Login User
+- Browse Calculations
+- Read Calculation by ID
+- Add Calculation
+- Edit Calculation
+- Delete Calculation
 
 ## Run Locally
-
 ```bash
 pip install -r requirements.txt
-uvicorn main:app --reload
-```
+python main.py
 
-## Run Tests
+API Docs:
+http://127.0.0.1:8000/docs
 
-```bash
+Run Tests:
 pytest
-```
 
-## Pages
+GitHub Repository:
+https://github.com/bt326/module14-bread-calculations
 
-* http://127.0.0.1:8000/register-page
-* http://127.0.0.1:8000/login-page
-
-## GitHub Repository
-
-https://github.com/bt326/module13-jwt-auth
-
-## Docker Hub Repository
-
-https://hub.docker.com/r/bhavithaamrutha/module13-jwt-auth
+Docker Hub Repository:
+https://hub.docker.com/r/bhavithaamrutha/module14-bread-calculations

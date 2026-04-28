@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculations</title>
+</head>
+<body>
+    <h1>Calculations</h1>
+
+    <form id="calcForm">
+        <input type="text" id="operation" placeholder="add/subtract/multiply/divide" required>
+        <input type="number" id="num1" placeholder="First Number" required>
+        <input type="number" id="num2" placeholder="Second Number" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <pre id="result"></pre>
+
+    <script>
+        document.getElementById("calcForm").onsubmit = async function(e) {
+            e.preventDefault();
+
+            const res = await fetch("/calculations", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    operation: document.getElementById("operation").value,
+                    num1: parseFloat(document.getElementById("num1").value),
+                    num2: parseFloat(document.getElementById("num2").value)
+                })
+            });
+
+            const data = await res.json();
+            document.getElementById("result").textContent =
+                JSON.stringify(data, null, 2);
+        };
+    </script>
+</body>
+</html>

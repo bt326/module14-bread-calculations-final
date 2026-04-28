@@ -92,6 +92,12 @@ def register_page(request: Request):
 def login_page(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
 
+@app.get("/calculations-page")
+def calculations_page(request: Request):
+    return templates.TemplateResponse(
+        "calculations.html",
+        {"request": request}
+    )
 
 # ---------------- Auth ----------------
 @app.post("/register")

@@ -67,3 +67,14 @@ def divide(a: Number, b: Number) -> float:
     result = a / b
     logger.info(f"Dividing {a} / {b} = {result}")  
     return result
+
+def power(a: Number, b: Number) -> Number:
+    result = a ** b
+    logger.info(f"Power {a} ** {b} = {result}")
+    return result
+
+
+def modulus(a: Number, b: Number) -> Number:
+    result = a % b
+    logger.info(f"Modulus {a} % {b} = {result}")
+    return result

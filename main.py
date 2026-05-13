@@ -57,14 +57,26 @@ class CalcUpdate(BaseModel):
 def do_calc(op, a, b):
     if op == "add":
         return a + b
+
     if op == "subtract":
         return a - b
+
     if op == "multiply":
         return a * b
+
     if op == "divide":
         if b == 0:
             raise HTTPException(status_code=400, detail="Cannot divide by zero")
         return a / b
+
+    if op == "power":
+        return a ** b
+
+    if op == "modulus":
+        if b == 0:
+            raise HTTPException(status_code=400, detail="Cannot modulus by zero")
+        return a % b
+
     raise HTTPException(status_code=400, detail="Invalid operation")
 
 
@@ -92,12 +104,14 @@ def register_page(request: Request):
 def login_page(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
 
+
 @app.get("/calculations-page")
 def calculations_page(request: Request):
     return templates.TemplateResponse(
         "calculations.html",
         {"request": request}
     )
+
 
 # ---------------- Auth ----------------
 @app.post("/register")
